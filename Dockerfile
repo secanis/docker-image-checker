@@ -17,7 +17,7 @@ RUN mkdir -p /goreleaser \
     sed -E 's/.*"([^"]+)".*/\1/' | \
     xargs -I {} curl -o /goreleaser_Linux_x86_64.tar.gz -sOL "https://github.com/goreleaser/goreleaser/releases/download/"{}'/goreleaser_Linux_x86_64.tar.gz' \
     && tar -xzf goreleaser_Linux_x86_64.tar.gz -C /goreleaser
-COPY . /go/src/github.com/secanis/docker-image-checker
+RUN git clone https://github.com/secanis/docker-image-checker.git /go/src/github.com/secanis/docker-image-checker
 WORKDIR /go/src/github.com/secanis/docker-image-checker
 RUN /goreleaser/goreleaser release
 
