@@ -21,3 +21,4 @@ changelog:
     - '^docs:'
     - '^test:'
     - '^hooks:'
+    - '^images:'
