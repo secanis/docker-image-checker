@@ -8,6 +8,8 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-extldflag
 # docker publisher image
 FROM golang:latest as publisher
 
+ARG GITHUB_TOKEN
+
 WORKDIR /
 RUN mkdir -p /goreleaser \
     && curl --silent "https://api.github.com/repos/goreleaser/goreleaser/releases/latest" | \
