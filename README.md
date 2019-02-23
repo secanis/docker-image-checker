@@ -16,4 +16,6 @@ The Docker Image Checker supports me to detect in my CI/CD pipeline a newer base
     docker run --rm secanis/docker-image-checker:latest ./dic -base "hub.docker.com/library/alpine:latest" -image "hub.docker.com/secanis/stjorna:2.1.3"
 
 
-    
+Download the binary from Github [https://github.com/secanis/docker-image-checker/releases](https://github.com/secanis/docker-image-checker/releases) and unpack it.
+
+    ./dic -base "hub.docker.com/library/alpine:latest" -image "hub.docker.com/secanis/stjorna:2.1.3"
