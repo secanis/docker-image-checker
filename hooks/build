@@ -5,5 +5,5 @@
 echo "[***] Build hook running"
 
 docker build \
-  --build-arg GITHUB_TOKEN=$GITHUB_TOKEN
+  --build-arg GITHUB_TOKEN=$GITHUB_TOKEN \
   -t $IMAGE_NAME .
